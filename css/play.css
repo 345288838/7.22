@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: skyblue;
+}
+
+.box {
+    width: 100%;
+    height: 879px;
+    position: relative;
+    
+}
+
+.start {
+    width: 400px;
+    height: 200px;
+    background-color: slateblue;
+    cursor: pointer;
+    margin: auto;
+    /* box-shadow: 5px 5px 5px rgb(75, 124, 126); */
+}
+
+.start span {
+    font-size: 40px;
+    line-height: 200px;
+    text-align: center;
+    margin-left: 115px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.grade {
+    width: 150px;
+    height: 100px;
+    background-color: cornflowerblue;
+    position: absolute;
+    bottom: 20px;
+    right: 400px;
+    font-weight: 700;
+    display: none;
+    /* box-shadow: 5px 5px 5px rgb(50, 74, 119); */
+}
+
+.grade span {
+    font-size: 20px;
+    position: absolute;
+    left: 50px;
+    top: 10px;
+}
+
+.life {
+    width: 150px;
+    height: 100px;
+    background-color: darkcyan;
+    position: absolute;
+    bottom: 20px;
+    right: 200px;
+    font-weight: 700;
+    display: none;
+    /* box-shadow: 5px 5px 5px rgb(1, 61, 61); */
+}
+
+.life span {
+    font-size: 20px;
+    position: absolute;
+    left: 40px;
+    top: 10px;
+}
+
+.grades,.lifes {
+    width: 50px;
+    height: 30px;
+    margin-top:50px;
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+.stop {
+    width: 100px;
+    height: 50px;
+    background-color: #ff0036;
+    color: #fff;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    display: none;
+    cursor: pointer;
+    /* box-shadow: 5px 5px 5px #9c0223; */
+}
+
+.stop span {
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.menu {
+    width: 500px;
+    height: 300px;
+    background-color: slateblue;
+    margin: auto;
+    display: none;
+    z-index: 100;
+    /* box-shadow: 5px 5px 5px rgb(22, 82, 110); */
+}
+
+.back ,.next,.restart{
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    background-color: cornflowerblue;
+    float: left;
+    margin-top: 100px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.back span,.next span,.restart span {
+    font-size: 20px;
+    line-height: 100px;
+    text-align: center;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: 700;
+}

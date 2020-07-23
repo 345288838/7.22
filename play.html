@@ -4,17 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body{
-            margin: 0;
-            padding: 0;
-            background-color: cornflowerblue;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/play.css">
 </head>
 <body>
+    <div class="box">
+        <div class="start">
+            <span>开始游戏</span>
+        </div>
+        <div class="grade">
+            <span>积分</span>
+            <div class="grades"></div>
+        </div>
+        <div class="life">
+            <span>生命值</span>
+            <div class="lifes"></div>
+        </div>
+        <div class="stop">
+            <span>停止游戏</span>
+        </div>
+        <div class="menu">
+            <div class="back">
+                <span>上一关</span>
+            </div>
+            <div class="restart">
+                <span>重新开始</span>
+            </div>
+            <div class="next">
+                <span>下一关</span>
+            </div>
+        </div>
+    </div>
     <script>
     var letters=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+
     
     var divs=[];
     function creat(num){
@@ -32,9 +54,19 @@
             divs.push(div);
         }
     }
-    creat(4);
+    // creat(4);
+    var start = document.querySelector(".start");
+        var grade = document.querySelector(".grade");
+        var life = document.querySelector(".life");
+        start.onclick = function () {
+            start.style.display = "none";
+            grade.style.display = "block";
+            life.style.display = "block";
+            stop.style.display = "block";
+            creat(4);
+        }
     var speed=5;
-    setInterval(function(){
+    var t=setInterval(function(){
         for(var i=0;i<divs.length;i++){
             divs[i].style.top=divs[i].offsetTop+speed+"px";
             // if(divs[i].style.top>document.documentElement.clientHeight){
@@ -52,10 +84,19 @@
                 document.body.removeChild(divs[i]);
                 divs.splice(i,1);
                 creat(1);
+                // score += 5;
+                // grades.innerHTML = score;
                 break;
             }
         }
     }
+    var stop = document.querySelector(".stop");
+        var menu = document.querySelector(".menu");
+        stop.onclick = function () {
+            clearInterval(t);
+            menu.style.display = "block";
+            clearInterval(p);
+        }
     </script>
 
 </body>
